@@ -39,13 +39,13 @@ public class FindEventualSafeStates {
                 }
             }
         }
-
+        Collections.sort(res);
         return res;
     }
     public static void main(String[] args) {
         int[][] grid = {{1,2,3,4},{1,2},{3,4},{0,4},{}};
         List<Integer> ans = eventualSafeNodes(grid);
-        Collections.sort(ans);
+        
         System.out.println(ans);
     }
 }
