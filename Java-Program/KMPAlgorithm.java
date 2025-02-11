@@ -52,8 +52,9 @@ public class KMPAlgorithm {
     }
     public static void main(String[] args) {
         String text = "ABACDABACDABABCABAB";
-        String pattern = "ABABD";
+        String pattern = "AABB";
         int[] lps = computeLPSArray(pattern);
+
         System.out.println(findPatten(text,pattern,lps));
     }
 }
