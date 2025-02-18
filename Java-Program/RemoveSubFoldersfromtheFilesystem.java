@@ -25,7 +25,7 @@ public class RemoveSubFoldersfromtheFilesystem {
         for(int i=0;i<n;i++){
             str[i] = sc.next();
         }
-
+        sc.close();
         removeSubfolders(str);
     }
     
