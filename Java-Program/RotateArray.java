@@ -11,6 +11,8 @@ public class RotateArray {
             int temp = nums[s];
             nums[s] = nums[e];
             nums[e] = temp;
+            s++;
+            e--;
         }
     }
     public static void main(String[] args) {
