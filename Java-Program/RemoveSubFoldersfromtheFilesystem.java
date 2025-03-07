@@ -12,6 +12,7 @@ public class RemoveSubFoldersfromtheFilesystem {
         List<String> list = new ArrayList<>();
         for(int i=0;i<n;i++){
             String path = str[i];
+            System.out.println(path);
 
         }
         return list;

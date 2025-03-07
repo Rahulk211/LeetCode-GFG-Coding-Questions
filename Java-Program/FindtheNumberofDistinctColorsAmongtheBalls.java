@@ -16,7 +16,6 @@ public class FindtheNumberofDistinctColorsAmongtheBalls {
                 map2.remove(prevcolor);
                }
             }
-
             map1.put(b,c);
             map2.put(c,map2.getOrDefault(c, 0)+1);
             result[i] = map2.size();
