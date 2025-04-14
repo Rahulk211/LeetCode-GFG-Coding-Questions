@@ -82,6 +82,7 @@ public class FindMedianfromDataStream {
                     System.out.println("Invalid choice");
                     break;
             }
+            sc.close();
         }
     }
 }
