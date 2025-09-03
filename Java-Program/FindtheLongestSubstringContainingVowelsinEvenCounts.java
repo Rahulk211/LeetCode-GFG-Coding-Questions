@@ -3,7 +3,7 @@ public class FindtheLongestSubstringContainingVowelsinEvenCounts {
     private static int findTheLongestSubstring(String s){
         int maxstring = Integer.MIN_VALUE;
         //int count = 0;
-        int[] freq = new int[5];
+        int[] freq = new int[26];
 
         for(int i=0;i<s.length();i++){
             char ch = s.charAt(i);
