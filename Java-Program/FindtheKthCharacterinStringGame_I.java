@@ -4,7 +4,7 @@ public class FindtheKthCharacterinStringGame_I {
 
    
     private static char kthCharacter(int k){
-        int op = k/2;
+        // int op = k/2;
         return 'a';
     }
     public static void main(String[] args) {

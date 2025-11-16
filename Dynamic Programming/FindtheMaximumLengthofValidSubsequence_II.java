@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class FindtheMaximumLengthofValidSubsequence_II {
 
     private static int maximumLength(int[] nums, int k){
-        int n = nums.length;
+        // int n = nums.length;
         int maxLen = 0;
 
         for(int i=0;i<k;i++){
