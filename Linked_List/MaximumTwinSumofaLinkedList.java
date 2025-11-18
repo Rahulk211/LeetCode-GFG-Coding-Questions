@@ -46,17 +46,45 @@ public class MaximumTwinSumofaLinkedList {
 
         // return max;
 
-        List<Integer> arr = new ArrayList<>();
-        Node temp = head;
-        while(temp != null){
-            arr.add(temp.data);
-            temp = temp.next;
-        }
+        // List<Integer> arr = new ArrayList<>();
+        // Node temp = head;
+        // while(temp != null){
+        //     arr.add(temp.data);
+        //     temp = temp.next;
+        // }
  
-        int max = Integer.MIN_VALUE;
-        for(int i=0;i<arr.size()/2;i++){
-            max = Math.max(max, arr.get(i) + arr.get(arr.size()-i-1));
+        // int max = Integer.MIN_VALUE;
+        // for(int i=0;i<arr.size()/2;i++){
+        //     max = Math.max(max, arr.get(i) + arr.get(arr.size()-i-1));
+        // }
+        // return max;
+
+        Node slow = head, fast = head;
+
+        while(fast != null && fast.next.next!= null){
+            slow = slow.next;
+            fast = fast.next.next;
         }
+
+        Node curr = slow, prev = null, Next = null;
+
+        while(curr != null){
+            Next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = Next;
+        }
+
+        Node f_half = head;
+        Node s_half = prev;
+        int max = Integer.MIN_VALUE;
+
+        while(s_half != null && f_half!=null){
+            max = Math.max(max, f_half.data + s_half.data);
+            f_half = f_half.next;
+            s_half = s_half.next;
+        }
+
         return max;
     }  
 
