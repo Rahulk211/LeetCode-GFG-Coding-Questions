@@ -2,21 +2,18 @@ import java.util.Arrays;
 
 public class MaximizeHappinessofSelectedChildren {
 
-    private static int maximumHappinessSum(int[] happiness, int k){
+    private static long maximumHappinessSum(int[] happiness, int k){
         int n = happiness.length;
-        int ans = 0, dec = 0;
+        long ans = 0;
+        int depth=0;
 
         Arrays.sort(happiness);
 
-        for(int i=n-1;i>=0;i--){
-            int happy = (happiness[i] - dec);
-            if(happy < 0) ans += 0;
-            else{
-                ans += happy;
-            }
-            dec++;
-            k--;
-            if(k==0) break;
+        for(int i=n-1;i>=0 && k-->0;i--){
+            int val = (happiness[i] - depth);
+            if(val < 0) break;
+            ans += val;
+            depth++;
         }
 
         return ans;
