@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class FlipEquivalentBinaryTrees {
 
-     static class TreeNode {
+    static class TreeNode {
         int data;
         TreeNode left;
         TreeNode right;
