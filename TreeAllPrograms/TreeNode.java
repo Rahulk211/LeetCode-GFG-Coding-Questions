@@ -11,7 +11,6 @@ class TreeNode {
     }
 
     public TreeNode() {
-        //TODO Auto-generated constructor stub
     }
 
     public TreeNode buildTree(Scanner sc){
